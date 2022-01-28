@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dongle', sans-serif;    
+}
+
+:root {
+    --fond: #FFD11E;
+    --shape-gche: #1b1a1a;
+    --titre: rgba(14, 14, 14, 0.562);
+    --h1-color: white;
+    --content: rgba(255, 255, 255, 0.836);
+}
+
+body {
+    background-color: var(--fond);
+}
+
+h1 {
+    color: var(--shape-gche);
+    opacity: 0.8;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1.2em;
+    transform: translateY(5vw);
+    font-size: 3em;
+}
+
+table {
+    background-color: var(--shape-gche);
+    color: var(--h1-color);  
+    font-size: 1.4em;
+    line-height: 0.9em;
+    padding: 1em;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;    
+    width: 80%;
+}
+
+tr {
+    display: flex;
+    flex-direction: column;    
+}
+
+.preview {
+    max-width: 80vw;
+    height: auto;
+}
+
+a {
+    color: var(--shape-gche);    
+    background-color: var(--content);
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+#action {
+    margin-left: 45vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+    gap: 1em;   
+}
+
+#edit, #delete {
+    font-size: 0.4em;
+    font-size: 1em;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td:nth-of-type(1) {
+    font-size: 1.5em;
+    margin-bottom: 0.5vw;
+}
+
+/************************MEDIA QUERY***************************/
+@media (min-width: 992px) {
+
+    * {
+        scrollbar-width: thin;
+    }
+
+    table {
+       width: 100%;
+    }
+    
+    h1 {       
+        padding-bottom: 0;   
+        transform: translateY(0);    
+    }
+    
+    tr {    
+        padding-bottom: 1.8vw;   
+        flex-direction: row;  
+        justify-content: center;
+        align-items: center;         
+    }  
+
+    tbody {               
+        width: 100%;
+    }
+
+    #action {
+        margin-left: 2vw;          
+    }
+
+    .preview {
+        max-width: 10vw;        
+    }
+
+    td {
+        width: 30%;
+    }
+
+    td:nth-of-type(1) {        
+        text-overflow: ellipsis;
+    }
+
+    td:nth-of-type(3) {       
+        text-overflow: ellipsis;       
+    }
+
+
+}
+

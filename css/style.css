@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dongle', sans-serif;    
+}
+
+:root {
+    --fond: #FFD11E;
+    --shape-gche: #1b1a1a;
+    --titre: rgba(14, 14, 14, 0.562);
+    --h1-color: white;
+    --content: rgba(255, 255, 255, 0.836);
+}
+
+
+body {
+    background-color: var(--fond);     
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: block;    
+    margin: auto;    
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;   
+    width: 100%; 
+    display: none;    
+}
+
+.shape-gche {
+    margin-top: 5vw;
+    width: 95%;
+    height: 130vw;
+    background-color: var(--shape-gche);
+    border-radius: 0 0 0 400px;
+}
+
+.global-shapes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 0);    
+}
+
+.header-slide {
+    display: flex;
+    flex-direction: column;      
+}
+
+.cover {
+    width: 80vw;
+    height: 130vw;
+    object-fit: cover;
+    border-radius: 0 400px 0 0;    
+}
+
+.titre {
+    background-color: var(--titre);
+    color: var(--h1-color);
+    font-size: 3.5em;
+    padding: 1em;
+    width: 70%;
+    height: 40vw;
+    position: absolute;
+    z-index: 100;
+    top: 34vw;
+    text-transform: uppercase;
+    line-height: 0.7em;
+}
+
+.content {
+    background-color: var(--content);
+    width: 80%;
+    height: 70%;
+    border-radius: 0 0 0 100px ;
+    padding: 1em;
+    font-size: 2em;
+    line-height: 0.7em;
+    margin-top: 5vw;
+    white-space: pre-line;
+    font-weight: 300;
+}
+
+/************************MEDIA QUERY***************************/
+@media (min-width: 992px) {
+
+    body {
+        overflow-y: hidden;   
+        overflow-x: hidden;
+    }
+
+    .slide {
+        flex-direction: column;
+        left: 3vw;
+    }
+
+    .shape-gche {
+        margin-right: 60%;
+        margin-top: 1vw;
+        width: 25%;
+        height: 40vw;               
+    }
+
+    .global-shapes {
+        top: 5%;
+    }
+
+    .header-slide {        
+        flex-direction: row;
+    }
+
+    .cover {
+        width: 85vw;
+        height: 25vw;      
+        margin-left: 15%;  
+    }
+
+    .titre {
+        top: 5vw;
+        height: 5vw;
+        width: 50%;
+        left: 12%;
+    }
+
+    .content {
+        width: 80%;          
+        margin-top: 1vw;
+        margin-left: 14%;
+        padding: 0.5em;
+    }
+
+    .txt-content {
+     margin-left: 2em; 
+    }
+
+
+}
+

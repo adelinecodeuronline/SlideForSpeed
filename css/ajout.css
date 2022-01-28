@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Dongle', sans-serif;    
+}
+
+:root {
+    --fond: #FFD11E;
+    --shape-gche: #1b1a1a;
+    --titre: rgba(14, 14, 14, 0.562);
+    --h1-color: white;
+    --content: rgba(255, 255, 255, 0.836);
+}
+
+
+body {
+    background-color: var(--fond);     
+}
+
+#gestionnaire {
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: var(--shape-gche);
+    font-size: 1.6em;
+    background-color: var(--content);
+    padding: 0.2em;
+    box-shadow: 2px 2px 20px var(--shape-gche);
+}
+
+#creation {
+    margin-top: 1vw;
+    color: var(--h1-color);
+    font-size: 1.6em;
+    text-align: center;
+}
+
+h1 {
+    color: var(--shape-gche);
+    opacity: 0.8;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1.2em;
+    transform: translateY(5vw);
+    font-size: 3em;
+}
+
+
+form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+}
+
+input {
+    padding-left: 0.5em;
+    height: 10vw;
+    border: none;
+    margin-bottom: 12px;   
+    font-size: 1.6em;   
+}
+
+textarea {
+    padding-left: 0.5em;
+    height: 25vw;
+    font-size: 1.6em; 
+    white-space: pre-line;
+}
+
+input:focus {
+    outline: none;
+    border:2px solid var(--shape-gche);
+}
+
+label {
+    font-size: 2em;
+    color: var(--h1-color);
+    font-weight: 300;
+}
+
+#file {
+    display: none;
+}
+
+
+#file-upload-filename, #files-links {
+    color: var(--h1-color);
+    font-size: 1.5em;
+}
+
+#file-button {
+    font-size: 1.8em;
+    width: 150px;
+    padding: 12px;
+    text-align: center;
+    color: var(--shape-gche);
+    background-color: var(--h1-color);
+    display: inline-block;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--fond);
+    color: var(--shape-gche);
+    font-size: 2.2em;
+    height: 20vw;
+    width: 100%;    
+}
+
+
+.shape-gche {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 3em;
+    background-color: var(--shape-gche);    
+}
+
+
+
+/************************MEDIA QUERY***************************/
+@media (min-width: 992px) {
+
+    * {
+        scrollbar-width: thin;
+    }
+
+    h1 {       
+        padding-bottom: 0;   
+        transform: translateY(0);    
+    }
+
+    #ada {
+        color: var(--shape-gche);
+        transition: .3 ease-in-out;
+        text-align: center;
+        font-size: 1.5em;  
+        opacity: 0.7;
+        display: none;      
+    }
+
+    .shape-gche {
+        width: 85%;
+        height: auto;     
+        padding-top: 0.3em;         
+    }  
+
+    form {
+       margin-top: 2vw;
+    }
+
+    input {        
+        height: 4vw;         
+    }
+
+    textarea {        
+        height: 15vw;       
+    }
+
+    button {       
+        height: 5vw;  
+        cursor: pointer;         
+    }
+
+
+}
+
